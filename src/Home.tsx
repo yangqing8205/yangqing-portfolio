@@ -6,7 +6,7 @@ type Panel = "home" | "work" | "experience" | "about" | "contact";
 
 const projects = [
   { no: "01", title: "BINGELINGO", subtitle: "从追剧截图到主动表达的 AI 学习闭环", style: "binge", status: "LIVE" },
-  { no: "02", title: "ESSAYFLOW", subtitle: "高中英语读后续写 AI 评测产品", style: "essay", status: "WIP" },
+  { no: "02", title: "ESSAYFLOW", subtitle: "高中英语读后续写评分与分析体验", style: "essay", status: "LIVE" },
 ];
 
 const bingeScreens = [
@@ -97,15 +97,16 @@ function Work() {
         <button className="project-arrow next" onClick={() => moveSlide(1)} aria-label="下一张产品截图"><Arrow direction="right"/></button>
       </div>
       <p className="screen-caption">{bingeScreens[slide].caption}</p>
-    </div> : <div className="wip-project" key="essay">
-      <span>WORK IN PROGRESS</span><strong>ESSAY<br/>FLOW</strong><p>评分方法与 Agent 工作流已完成，真实模型链路仍在继续开发。</p>
-    </div>}
+    </div> : <a className="essayflow-showcase" key="essay" href="https://yangqing8205.github.io/EssayFlow-visual-redesign/" target="_blank" rel="noreferrer" aria-label="打开 EssayFlow 在线体验">
+      <img src="/projects/essayflow-product.png" alt="EssayFlow 读后续写评分与分析产品界面" />
+      <span className="essayflow-showcase-label"><b>LIVE PRODUCT</b><b>OPEN EXPERIENCE ↗</b></span>
+    </a>}
 
     <div className="project-title"><strong>{project.title}</strong><span>{index + 1} / {projects.length}</span></div>
     <p className="project-subtitle">{project.subtitle}</p>
     <div className="project-detail">
       <p>{project.style === "binge" ? "针对看剧查词打断观影、收藏后难以转化为主动表达的问题，独立设计并上线从快捷截图、AI 表达提取、Notion 归档，到递进复习和角色对话的完整学习产品。" : "针对通用 AI 批改偏重语法、难以判断情节和主题的问题，设计高中英语读后续写评测产品，并将复杂评分任务拆分为结构化工作流。"}</p>
-      <div className="project-facts"><span><b>ROLE</b>独立产品设计与开发</span><span><b>STATUS</b>{project.style === "binge" ? "已部署上线" : "Web 原型开发中"}</span></div>
+      <div className="project-facts"><span><b>ROLE</b>独立产品设计与开发</span><span><b>STATUS</b>已部署上线</span></div>
     </div>
     {project.style === "binge" && (
       <div className="project-actions">
@@ -113,6 +114,12 @@ function Work() {
         <a className="project-repo-link" href="https://github.com/yangqing8205/binge-lingo" target="_blank" rel="noreferrer">
           GITHUB REPOSITORY ↗
         </a>
+      </div>
+    )}
+    {project.style === "essay" && (
+      <div className="project-actions">
+        <a className="project-case-link" href="https://yangqing8205.github.io/EssayFlow-visual-redesign/" target="_blank" rel="noreferrer">VIEW LIVE EXPERIENCE →</a>
+        <a className="project-repo-link" href="https://github.com/yangqing8205/EssayFlow-visual-redesign" target="_blank" rel="noreferrer">GITHUB REPOSITORY ↗</a>
       </div>
     )}
     <footer className="paper-footer"><span>YQ©26</span><span>→ NEXT PROJECT</span></footer>

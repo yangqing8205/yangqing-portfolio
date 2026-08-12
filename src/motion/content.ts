@@ -2,7 +2,7 @@ export type Panel = "home" | "work" | "about" | "lab" | "contact";
 
 export const projects = [
   { no: "01", title: "BINGELINGO", subtitle: "从追剧截图到主动表达的 AI 学习闭环", style: "binge", status: "LIVE" },
-  { no: "02", title: "ESSAYFLOW", subtitle: "高中英语读后续写 AI 评测产品", style: "essay", status: "WIP" },
+  { no: "02", title: "ESSAYFLOW", subtitle: "高中英语读后续写评分与分析体验", style: "essay", status: "LIVE" },
 ] as const;
 
 export const bingeScreens = [
@@ -13,4 +13,3 @@ export const bingeScreens = [
 ] as const;
 
 export const navPanels: Exclude<Panel, "home">[] = ["work", "about", "lab", "contact"];
-
