@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+.tef_dist
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# EdgeOne
+.edgeone/*
+
+# IDE
+.vscode
+.idea
+*.swp
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
