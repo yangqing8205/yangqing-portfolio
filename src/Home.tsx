@@ -97,7 +97,7 @@ function Work() {
         <button className="project-arrow next" onClick={() => moveSlide(1)} aria-label="下一张产品截图"><Arrow direction="right"/></button>
       </div>
       <p className="screen-caption">{bingeScreens[slide].caption}</p>
-    </div> : <a className="essayflow-showcase" key="essay" href="https://essayflow-delta.vercel.app/" target="_blank" rel="noreferrer" aria-label="打开 EssayFlow 在线体验">
+    </div> : <a className="essayflow-showcase" key="essay" href="https://yangqing8205.github.io/EssayFlow/" target="_blank" rel="noreferrer" aria-label="打开 EssayFlow 在线体验">
       <img src="/projects/essayflow-product.png" alt="EssayFlow 读后续写评分与分析产品界面" />
       <span className="essayflow-showcase-label"><b>LIVE PRODUCT</b><b>OPEN EXPERIENCE ↗</b></span>
     </a>}
@@ -118,7 +118,7 @@ function Work() {
     )}
     {project.style === "essay" && (
       <div className="project-actions">
-        <a className="project-case-link" href="https://essayflow-delta.vercel.app/" target="_blank" rel="noreferrer">VIEW LIVE EXPERIENCE →</a>
+        <a className="project-case-link" href="https://yangqing8205.github.io/EssayFlow/" target="_blank" rel="noreferrer">VIEW LIVE EXPERIENCE →</a>
         <a className="project-repo-link" href="https://github.com/yangqing8205/EssayFlow" target="_blank" rel="noreferrer">GITHUB REPOSITORY ↗</a>
       </div>
     )}
