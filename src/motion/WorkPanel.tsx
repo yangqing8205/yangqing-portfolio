@@ -140,7 +140,7 @@ export default function WorkPanel() {
             ) : (
               <a
                 className="essayflow-showcase"
-                href="https://yangqing8205.github.io/EssayFlow-visual-redesign/"
+                href="https://essayflow-delta.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="打开 EssayFlow 在线体验"
@@ -166,7 +166,7 @@ export default function WorkPanel() {
           </a>
         )}
         {project.style === "essay" && (
-          <a className="project-repo-link" href="https://yangqing8205.github.io/EssayFlow-visual-redesign/" target="_blank" rel="noreferrer">
+          <a className="project-repo-link" href="https://essayflow-delta.vercel.app/" target="_blank" rel="noreferrer">
             VIEW ESSAYFLOW EXPERIENCE ↗
           </a>
         )}
